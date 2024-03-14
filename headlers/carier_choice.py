@@ -7,7 +7,7 @@ from keyboard.prof_keyboards import make_row_keyboard
 avalabel_prof_names=['Разработчик', 'Аналитик', 'Тестировщик']
 avalabel_prof_graders=['Джуниор', 'Мидл', 'Синьер']
 
-router=Router()
+router = Router()
 class ChoiseProfName(StatesGroup):
     choise_prof_name = State()
     choise_prof_graders = State()

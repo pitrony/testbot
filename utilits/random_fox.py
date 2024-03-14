@@ -1,10 +1,11 @@
 import requests
+# Утилита показа случайной картинки с лисой
 def fox():
     url = 'https://randomfox.ca/floof/'
     response = requests.get(url)
 
     if response.status_code:
-        data=response.json()
+        data = response.json()
         return data.get('image')
 
 if __name__ == '__main__':

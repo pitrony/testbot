@@ -3,6 +3,8 @@ import config
 from aiogram import Bot, Dispatcher, types, F
 from headlers import comand
 from headlers import carier_choice
+from headlers import weather
+
 import logging
 
 async def main():
@@ -14,9 +16,12 @@ async def main():
 
     # Диспечер
     dp = Dispatcher()
+    dp.include_router(weather.router)
     dp.include_router(carier_choice.router)
     dp.include_router(comand.router)
+
     await dp.start_polling(bot)
+
 
 
 if __name__ == '__main__':
