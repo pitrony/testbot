@@ -24,7 +24,7 @@ def weathers():
       # await message.answer(f'Weather , {temp}')
     else:
         temp="null"
-    return temp, city
+    return (temp, city)
 
 if __name__ == '__main__':
         weathers()

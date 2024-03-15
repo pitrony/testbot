@@ -18,8 +18,7 @@ router = Router()
 @router.message(Command('weather'))
 async def mes_weather(message: types.Message):
   #  name = message.chat.first_name
-    temp = weath.weathers()
-    city = weath.weathers()
+    temp, city = weath.weathers()
     await message.answer(f'Погода нынче в городе {city} такая {temp}', reply_markup=make_row_keyboard(weather_names))
 @router.message(F.text.lower() == 'погода')
 async def cmd_weather(message: types.Message):
