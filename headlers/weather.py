@@ -14,15 +14,12 @@ router = Router()
 #   choise_prof_name = State()
 #    choise_prof_graders = State()
 
-@router.message(Command('Погода'))
+@router.message(F.text.lower() == 'погода')
+async def mes_weather(message: types.Message):
+  #  name = message.chat.first_name
+    temp = weath.weathers()
+    await message.answer(f'Погода нынче такая  {temp}')
+@router.message(Command('weather'))
 async def cmd_weather(message: types.Message):
   #  name = message.chat.first_name
-    await message.answer(f'Погода нынче такая ')
-
-
-# Хэндлер на команду /
-#@router.message(Command('prof'))
-#async def cmd_prof(message: types.Message, state: FSMContext):
-#    name = message.chat.first_name
-#    await message.answer(f'Привет, {name}, выбери профессию', reply_markup=make_row_keyboard(avalabel_prof_names))
-#    await state.set_state(ChoiseProfName.choise_prof_name)
+    await message.answer(f'Now weather is cold')

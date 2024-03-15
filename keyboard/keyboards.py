@@ -11,10 +11,10 @@ keyboard1=[
     [button1, button2],
     [button4, button5],
 ]
-keyboard2=[
+keyboard2 = [
     [button3, button6],
 ]
 
-kb1=types.ReplyKeyboardMarkup(keyboard=keyboard1, resize_keyboard=True)
-kb2=types.ReplyKeyboardMarkup(keyboard=keyboard2, resize_keyboard=True)
+kb1 = types.ReplyKeyboardMarkup(keyboard=keyboard1, resize_keyboard=True)
+kb2 = types.ReplyKeyboardMarkup(keyboard=keyboard2, resize_keyboard=True)
 
