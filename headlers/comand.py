@@ -16,7 +16,7 @@ async def cmd_start(message: types.Message):
 @router.message(F.text.lower() == 'инфо')
 async def cmd_info(message: types.Message):
     name = message.chat.first_name
-    await message.answer(f'Это тестовый бот создан Фроловым Алексеем email: frolov25alesha@gmail.com', reply_markup=kb1)
+    await message.answer(f'Это тестовый бот создал Фролов Алексей email: frolov25alesha@gmail.com', reply_markup=kb1)
 @router.message(Command('help'))
 async def cmd_help(message: types.Message):
     await message.answer(help_mess, reply_markup=types.ReplyKeyboardRemove())
