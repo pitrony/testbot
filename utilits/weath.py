@@ -12,7 +12,7 @@ def weathers():
         wdata = response.json()
         #description = data['weather'][0]['description']
         #['main]['humidity]
-        city=wdata.get('name', {})
+        city = wdata.get('name', {})
         #pressure = data['main']['pressure']
         #wind = data['wind']['speed']
         #return (cur_temp)
